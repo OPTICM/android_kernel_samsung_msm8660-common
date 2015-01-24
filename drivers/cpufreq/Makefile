@@ -1,3 +1,5 @@
+KBUILD_CFLAGS	+=-O3
+
 # CPUfreq core
 obj-$(CONFIG_CPU_FREQ)			+= cpufreq.o
 # CPUfreq stats
@@ -26,6 +28,9 @@ obj-$(CONFIG_CPU_FREQ_GOV_GAMING)  	+= cpufreq_gaming.o
 obj-$(CONFIG_CPU_FREQ_GOV_CONSERVATIVE)	+= cpufreq_conservative.o
 obj-$(CONFIG_CPU_FREQ_GOV_BADASS)       += cpufreq_badass.o
 obj-$(CONFIG_CPU_FREQ_GOV_ASSWAX)	+= cpufreq_asswax.o
+obj-$(CONFIG_CPU_FREQ_GOV_SMARTMAX)     += cpufreq_smartmax.o
+obj-$(CONFIG_CPU_FREQ_GOV_NIGHTMARE)	+= cpufreq_nightmare.o
+obj-$(CONFIG_CPU_FREQ_GOV_INTELLIMM)	+= cpufreq_intellimm.o
 
 # CPUfreq cross-arch helpers
 obj-$(CONFIG_CPU_FREQ_TABLE)		+= freq_table.o

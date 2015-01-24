@@ -341,7 +341,7 @@ enum {
 };
 
 #define MAX_FREQ_LIMIT		1512000
-#define MIN_FREQ_LIMIT		192000
+#define MIN_FREQ_LIMIT		96000
 
 #define MAX_TOUCH_LIMIT		486000
 #ifdef CONFIG_TARGET_SERIES_DALI
@@ -493,6 +493,15 @@ extern struct cpufreq_governor cpufreq_gov_samsung;
 #elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_HYPER)
 extern struct cpufreq_governor cpufreq_gov_hyper;
 #define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_hyper)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_SMARTMAX)
+extern struct cpufreq_governor cpufreq_gov_smartmax;
+#define CPUFREQ_DEFAULT_GOVERNOR (&cpufreq_gov_SMARTMAX)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_NIGHTMARE)
+extern struct cpufreq_governor cpufreq_gov_nightmare;
+#define CPUFREQ_DEFAULT_GOVERNOR	(&cpufreq_gov_nightmare)
+#elif defined(CONFIG_CPU_FREQ_DEFAULT_GOV_INTELLIMM)
+extern struct cpufreq_governor cpufreq_gov_intellimm;
+#define CPUFREQ_DEFAULT_GOVERNOR        (&cpufreq_gov_intellimm)
 #endif
 
 
